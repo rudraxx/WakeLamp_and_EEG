@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WakeLamp_EEG</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_arduino_main">ArduinoInterface</string>
+    <string name="title_activity_splash">WakeLamp_EEG</string>
+
+</resources>

@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArduinoMain"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TV Backlighting"
+        android:id="@+id/textView"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disconnect"
+        android:id="@+id/bDisableBlueTooth"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Display Time"
+        android:id="@+id/tvTime"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="380dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="BLUE_LED"
+        android:id="@+id/textView_label_Blue"
+        android:layout_below="@+id/textView_Red"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0/255"
+        android:id="@+id/textView_Blue"
+        android:layout_alignBottom="@+id/textView_label_Blue"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="GREEN_LED"
+        android:id="@+id/textView_label_Green"
+        android:layout_below="@+id/textView_label_Blue"
+        android:layout_alignLeft="@+id/textView_label_Blue"
+        android:layout_alignStart="@+id/textView_label_Blue"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/holo_green_dark" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0/255"
+        android:id="@+id/textView_Green"
+        android:layout_alignTop="@+id/textView_label_Green"
+        android:layout_alignLeft="@+id/textView_Blue"
+        android:layout_alignStart="@+id/textView_Blue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0/255"
+        android:id="@+id/textView_Red"
+        android:layout_alignTop="@+id/textView_label_Red"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="RED_LED"
+        android:id="@+id/textView_label_Red"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView_label_Blue"
+        android:layout_alignStart="@+id/textView_label_Blue"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PlaySound"
+        android:id="@+id/bSound"
+        android:layout_marginLeft="20dp"
+        android:layout_alignTop="@+id/bDisableBlueTooth"
+        android:layout_alignEnd="@+id/textView_label_Blue" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StopSound"
+        android:id="@+id/bStop"
+        android:layout_above="@+id/bSethour"
+        android:layout_toEndOf="@+id/textClock" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="sethour"
+        android:inputType="number"
+        android:id="@+id/eSetHour"
+        android:layout_alignTop="@+id/bSethour"
+        android:layout_toEndOf="@+id/bDisableBlueTooth" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SetHour_24"
+        android:id="@+id/bSethour"
+        android:layout_below="@+id/bSound"
+        android:layout_toEndOf="@+id/textView_label_Red"
+        android:layout_marginTop="30dp" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:textSize="40sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect_EEG"
+        android:id="@+id/bConnectEEG"
+        android:layout_below="@+id/eSetHour"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Blink=0"
+        android:id="@+id/tvBlink"
+        android:layout_alignBottom="@+id/bConnectEEG"
+        android:layout_alignEnd="@+id/textView_label_Blue" />
+
+
+</RelativeLayout>
